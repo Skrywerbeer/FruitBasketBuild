@@ -1,0 +1,168 @@
+/* /Components/Pages/Index.razor.rz.scp.css */
+#background[b-0vrtclfrz4] {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(to left top, tomato, cornflowerblue);
+	position: fixed;
+	z-index: -1;
+}
+
+#products[b-0vrtclfrz4] {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+input[b-0vrtclfrz4] {
+	width: 50%;
+	height: 3rem;
+	border-radius: 8px;
+	font-size: 1.5rem;
+	
+	margin-top: 2rem;
+	margin-bottom: 4rem;
+	
+	
+	padding-left: 2rem;
+	padding-right: 1rem;
+}
+
+#products[b-0vrtclfrz4]  ul {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: 100px;
+	list-style: none;
+	padding: 0;
+}
+
+@media(min-width: 1200px) {
+	#products[b-0vrtclfrz4]  ul {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media(min-width: 2400px) {
+	#products[b-0vrtclfrz4]  ul {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+
+/* /Components/ProductCard.razor.rz.scp.css */
+li.Checkers[b-39g8109k08] {
+	--RetailerColor: #38a8ae;
+}
+
+li.Woolworths[b-39g8109k08] {
+	--RetailerColor: black;
+}
+
+li.PickAndPay[b-39g8109k08] {
+	--RetailerColor: #ba0c2f;
+}
+
+li[b-39g8109k08] {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 300px;
+	height: 400px;
+	border-radius: 16px;
+	border-top: solid 24px var(--RetailerColor);
+	background: antiquewhite;
+	box-shadow: 0 32px 32px #0a0a0aa0;
+	transition: all 400ms;
+@media(hover: hover) {
+	&:hover[b-39g8109k08] {
+		transform: scale(1.05);
+	}
+}
+	
+	& svg {
+		position: absolute;
+		
+	}
+
+	& img[b-39g8109k08] {
+		height: 50%;
+		background: #ffffffa0;
+		border-radius: 16px;
+		margin-top: 2rem;
+		box-shadow: 0 16px 32px #0a0a0aa0;
+	}
+
+	& a[b-39g8109k08] {
+		text-decoration: none;
+		color: black;
+	}
+	
+	& div[b-39g8109k08] {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: auto;
+		margin-bottom: 2rem;
+
+		& p {
+			margin: 0.2rem;
+		}
+	}
+}
+/* /Components/SimilarProductsDrawer.razor.rz.scp.css */
+ul[b-rn99cjtb37] {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 25px;
+	overflow: scroll;
+	
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	background: ivory;
+	transition: width 1s;
+	
+	& li:first-of-type {
+		margin-top: 2rem;
+	}
+	
+	& li:last-of-type[b-rn99cjtb37] {
+		margin-bottom: 3rem;
+	}
+
+	&[b-rn99cjtb37]  li {
+		width: 250px;
+		height: calc(250px*(4/3));;
+	}
+	
+	& hr[b-rn99cjtb37] {
+		color: slategray;
+		width: 100%;
+	}
+}
+
+	
+
+li[b-rn99cjtb37] {
+	/*transition: opacity 400ms;*/
+}
+
+ul.open[b-rn99cjtb37] {
+	width: 80vw;
+	& li {
+		/*opacity: 1;*/
+	}
+}
+@media(min-width: 1200px) {
+	ul.open[b-rn99cjtb37] {
+		width: 400px;
+	}
+}
+
+ul.closed[b-rn99cjtb37] {
+	width: 0px;
+	& li {
+		/*opacity: 0;*/
+	}
+}
